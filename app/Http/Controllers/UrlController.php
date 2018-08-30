@@ -44,7 +44,7 @@ class UrlController extends Controller
             'url' =>$url
         ];
 
-        return view('success')->with($with);
+        return view('welcome')->with($with);
 
     }
 

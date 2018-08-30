@@ -84,7 +84,7 @@
 
         <div class="links">
 
-            <a href="{{ url('url/'.$url->short_url) }}">
+            <a href="{{ url('url/'.$url->short_url) }}" target="_blank">
                 {{ url('url/'.$url->short_url) }}
             </a>
 

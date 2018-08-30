@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <form method="post" action="{{ url('/url') }}">
+                    <form method="post" action="{{ route('shorten.url') }}">
 
                         {{ csrf_field() }}
 
@@ -92,6 +92,14 @@
                         <button type="submit">Shorten URL</button>
 
                     </form>
+
+                    @if(isset($url))
+
+                        <a href="{{ url($url->short_url) }}" target="_blank">
+                            {{ url($url->short_url) }}
+                        </a>
+
+                    @endif
 
                 </div>
             </div>

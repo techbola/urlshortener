@@ -13,7 +13,17 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::post('/', [
+   'uses' => 'UrlController@store',
+   'as' => 'shorten.url'
+]);
+
+ Route::get('/{url}', [
+     'uses' => 'UrlController@show',
+     'as' => 'shorten.view'
+ ]);
 
 Route::resource('url', 'UrlController');
 
