@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('url', 'UrlController');
+
+
+//Trying The API
+//
+//    method = 'POST';
+//    api: 'urlshortener.test/api/url';
+//
+//    Parameters::
+//
+//    name = 'url';
+//    value = 'site to shorten';

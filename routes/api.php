@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('url', function (Request $request){
+
+    $url = Url::Create([
+        'url' => $request->url,
+        'short_url' => str_random(6)
+    ]);
+
+    return $url;
+
+});
